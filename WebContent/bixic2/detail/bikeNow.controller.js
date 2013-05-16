@@ -1,7 +1,7 @@
 jQuery.sap.require("sap.m.MessageBox");
 jQuery.sap.require("js.datautil");
 
-sap.ui.controller("bixic2.detail.bikeNow", {
+sap.ui.controller("bixic2.detail.bikeNow", { 
 
 	onInit : function() {
 		var that = this;
