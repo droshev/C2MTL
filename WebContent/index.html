@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<script src="resources/sap-ui-core.js" id="sap-ui-bootstrap"
+	data-sap-ui-libs="sap.m, sap.makit, sap.ui.commons"
+	data-sap-ui-theme="sap_mvi" data-sap-ui-xx-fakeOS="ipad">
+</script>
+
+<script src="http://maps.googleapis.com/maps/api/js?v=3.3&sensor=false"></script>
+
+<script>
+    
+	// Tell UI5 where to find application content
+	sap.ui.localResources("bixic2");
+	sap.ui.localResources("js");
+
+	jQuery.sap.registerModulePath('Application', 'Application');
+	// Launch application
+	jQuery.sap.require("Application");
+	var oApp = new Application({root : "content"});
+</script>
+
+</head>
+<body class="sapUiBody" role="application">
+	<div id="content"></div>
+</body>
+</html>

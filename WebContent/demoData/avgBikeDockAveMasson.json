@@ -1,0 +1,43 @@
+{
+    "data": [{
+        "type": "Avg Bikes",
+        "value": "6",
+        "name": "10e Avenue / Masson",
+        "time": "7/16/2012 3:00:00 PM - 7/16/2012 4:00:00 PM"
+    },{
+        "type": "Avg Docks",
+        "value": "11",
+        "name": "10e Avenue / Masson",
+        "time": "7/16/2012 3:00:00 PM - 7/16/2012 4:00:00 PM"
+    },{
+        "type": "Avg Bikes",
+        "value": "8",
+        "name": "10e Avenue / Masson",
+        "time": "7/16/2012 4:00:00 PM - 7/16/2012 5:00:00 PM"
+    },{
+        "type": "Avg Docks",
+        "value": "10",
+        "name": "10e Avenue / Masson",
+        "time": "7/16/2012 4:00:00 PM - 7/16/2012 5:00:00 PM"
+    },{
+        "type":  "Avg Bikes",
+        "value": "10",
+        "name": "10e Avenue / Masson",
+        "time": "7/16/2012 5:00:00 PM - 7/16/2012 6:00:00 PM"
+    },{
+        "type": "Avg Docks",
+        "value": "7",
+        "name": "10e Avenue / Masson",
+        "time": "7/16/2012 5:00:00 PM - 7/16/2012 6:00:00 PM"
+    },{
+        "type": "Avg Bikes",
+        "value": "13",
+        "name": "10e Avenue / Masson",
+        "time": "7/16/2012 6:00:00 PM - 7/16/2012 7:00:00 PM"
+    },{
+        "type": "Avg Docks",
+        "value": "5",
+        "name": "10e Avenue / Masson",
+        "time": "7/16/2012 6:00:00 PM - 7/16/2012 7:00:00 PM"
+    }]
+}
