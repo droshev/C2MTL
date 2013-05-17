@@ -10,8 +10,8 @@ var AppContext = (function (){
 	 */
 	appContext.getDefaultSettings = function() {
 		return {
-			avgDateFrom: new Date('July 16, 2012 15:00:00'),
-			avgDateTo: new Date('July 16, 2012 19:00:00'),
+			avgDateFrom: new Date('July 16, 2012 06:00:00'),
+			avgDateTo: new Date('July 16, 2012 21:00:00'),
 			dateFrom: new Date('July 16, 2012 00:00:00'),
 			dateTo: new Date('July 16, 2012 23:59:59'),
 			station: '10e Avenue / Masson',

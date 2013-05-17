@@ -97,15 +97,16 @@ sap.ui.controller("bixic2.detail.bikeDockLater", {
 	_loadLiveData: function(oController) {
 		sap.ui.getCore().byId("bikeDockLaterBusy").open();
 		var sStationName = sap.ui.getCore().byId("BikeDockLaterStationSelect").getSelectedItem().getKey();
-		var oDateFrom = new Date(sap.ui.getCore().byId("BikeDockLaterTimeFromInput").getValue());
-		var oDateTo = new Date(sap.ui.getCore().byId("BikeDockLaterTimeToInput").getValue());
+		var sDFrom = sap.ui.getCore().byId("BikeDockLaterTimeFromInput").getValue();
+		var sDTo = sap.ui.getCore().byId("BikeDockLaterTimeToInput").getValue();
+		var oDateFrom = new Date(sDFrom);
+		var oDateTo = new Date(sDTo);
 		
-		//temporary due to bug
 		if(isNaN(oDateFrom.getDate()) ){
-		    oDateFrom = new Date(2012, 06, 16, 15);
+		    oDateFrom = new Date(sDFrom.substr(6,4), (sDFrom.substr(3,2) - 1), sDFrom.substr(0,2), sDFrom.substr(11,2));
 		}
 		if(isNaN(oDateTo.getDate())){
-                    oDateTo = new Date(2012, 06, 16, 19);
+                    oDateTo = new Date(sDTo.substr(6,4), (sDTo.substr(3,2) - 1), sDTo.substr(0,2), sDTo.substr(11,2));
                 }
 		var sFrequency = sap.ui.getCore().byId("BikeDockLaterFrequencySelect").getSelectedItem().getKey();
 		var oSettingsModel = oController.getView().getModel("settings");
