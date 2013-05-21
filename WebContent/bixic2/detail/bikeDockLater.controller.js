@@ -8,12 +8,30 @@ sap.ui.controller("bixic2.detail.bikeDockLater", {
 		var sDefaultStation = AppContext.getDefaultSettings().station;
 		var oSettingsModel = new sap.ui.model.json.JSONModel( { stationName: sDefaultStation });
 		this.getView().setModel(oSettingsModel, "settings");
+		var that = this;
 		
 		this.oBusyDialog = new sap.m.BusyDialog("bikeDockLaterBusy", {
 			text : "Retrieving Bixi Information",
 			title : "Loading",
 			showCancelButton : true
 		});
+	},
+	
+	showHideBusyDialog : function(bShow) {
+	    if (bShow) {
+	        sap.ui.getCore().byId("bikeDockLaterBusy").open();
+	    } else {
+	        sap.ui.getCore().byId("bikeDockLaterBusy").close();
+	    }
+	},
+
+	showErrorDialog : function() {
+	    jQuery.sap.require("sap.m.MessageBox");
+	    sap.m.MessageBox.show("Sorry, something unexpected happened",
+	            sap.m.MessageBox.Icon.INFORMATION, "Error",
+	            [ sap.m.MessageBox.Action.OK ], function() {
+	            / * do something * /;
+	    });
 	},
 	
 	
@@ -77,8 +95,9 @@ sap.ui.controller("bixic2.detail.bikeDockLater", {
 	 * @param oController this controller
 	 */
 	filter: function(oEvent, oController) {
-		sap.ui.getCore().byId("BikeDockLaterConfigurePopover").close();
-		oController._loadLiveData(oController);
+	    oController.showHideBusyDialog(true);
+	    sap.ui.getCore().byId("BikeDockLaterConfigurePopover").close();
+	    oController._loadLiveData(oController);
 	},
 	
 	/**

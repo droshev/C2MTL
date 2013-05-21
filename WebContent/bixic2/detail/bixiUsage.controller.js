@@ -16,6 +16,24 @@ sap.ui.controller("bixic2.detail.bixiUsage", {
 			showCancelButton : true
 		});
 	},
+        
+        showHideBusyDialog : function(bShow) {
+            if (bShow) {
+                sap.ui.getCore().byId("bixiUsageBusy").open();
+            } else {
+                sap.ui.getCore().byId("bixiUsageBusy").close();
+            }
+        },
+
+        showErrorDialog : function() {
+            jQuery.sap.require("sap.m.MessageBox");
+            sap.m.MessageBox.show("Sorry, something unexpected happened",
+                    sap.m.MessageBox.Icon.INFORMATION, "Error",
+                    [ sap.m.MessageBox.Action.OK ], function() {
+                    / * do something * /;
+            });
+        },
+        
 	
 	
 	/**
@@ -98,6 +116,7 @@ sap.ui.controller("bixic2.detail.bixiUsage", {
 	 * Synchronously loads data based on the user input contained in the view. 
 	 */
 	_loadLiveData: function(oController) {
+            oController.showHideBusyDialog(true);
 		sap.ui.getCore().byId("bixiUsageBusy").open();
 		var sStationName = sap.ui.getCore().byId("BixiUsageStationSelect").getSelectedItem().getKey();
 		var oDateFrom = new Date(sap.ui.getCore().byId("BixiUsageDateInput").getValue());
