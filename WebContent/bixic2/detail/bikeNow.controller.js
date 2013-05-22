@@ -62,7 +62,7 @@ sap.ui.controller("bixic2.detail.bikeNow", {
 			    var THRESHOLD = 30;
 			    var bCanGetABike = iRadius < THRESHOLD ? false : true;
 
-				// TODO: Draw Circles in Workshop 
+				// TODO: Draw Circles in Workshop
 			}
 
 			for ( var j = 0; j < aCircles.length; j++) {
@@ -71,7 +71,7 @@ sap.ui.controller("bixic2.detail.bikeNow", {
 					return function() {
 						sap.m.MessageBox.show("Station "
 								+ aCircles[k].name + " has "
-								+ aCircles[k].nbDocks + " bikes",
+								+ aCircles[k].nbBikes + " bikes",
 								sap.m.MessageBox.Icon.INFORMATION,
 								aCircles[k].name,
 								[ sap.m.MessageBox.Action.OK ],
