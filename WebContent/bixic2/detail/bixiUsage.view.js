@@ -84,15 +84,7 @@ sap.ui.jsview("bixic2.detail.bixiUsage", {
 		  oChart.setModel(oModel);
 		  oChart.bindRows("/data");
 		 
-		  // TODO: move to controller
-		  oChart.attachEvent("doubletap", function(eventObj) {
-				jQuery.sap.require("sap.m.MessageBox");
-		    	var chartObj = eventObj.oSource;
-			    var msg = eventObj.oSource.getSelectedCategory();
-			    sap.m.MessageBox.show(msg, sap.m.MessageBox.Icon.INFORMATION,
-					"Chart Double Tap - Selected Category",
-					[ sap.m.MessageBox.Action.OK ]);
-		  });
+		  // TODO: Implement Touch Events for oChart in the workshop!
 		
 		  return oChart;
       },

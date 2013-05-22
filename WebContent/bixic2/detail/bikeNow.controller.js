@@ -62,31 +62,7 @@ sap.ui.controller("bixic2.detail.bikeNow", {
 			    var THRESHOLD = 30;
 			    var bCanGetABike = iRadius < THRESHOLD ? false : true;
 
-				var oPopOptions = {
-					clickable : true,
-					strokeOpacity : 0.8,
-					strokeWeight : 2,
-					fillOpacity : 0.35,
-					map : oMap,
-					center : new google.maps.LatLng(fLat, fLong),
-				};
-
-				if (bCanGetABike) {
-					oPopOptions.strokeColor = '#36D792';
-					oPopOptions.fillColor = '#36D792';
-					oPopOptions.radius = iRadius;
-				} else {
-					oPopOptions.strokeColor = '#FF0000';
-					oPopOptions.fillColor = '#FF0000';
-					oPopOptions.radius = 100;
-				}
-
-				var circle = new google.maps.Circle(oPopOptions);
-				aCircles.push({
-					oCircle : circle,
-					name : sName,
-					nbDocks : iNumFreeBikes
-				});
+				// TODO: Draw Circles in Workshop
 			}
 
 			for ( var j = 0; j < aCircles.length; j++) {
