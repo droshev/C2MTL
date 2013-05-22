@@ -3,7 +3,7 @@ sap.ui.jsview("bixic2.detail.bixiUsage", {
 	  //framework method
       getControllerName : function() {
          return "bixic2.detail.bixiUsage";
-      },
+      }, 
 
       // framework method
       createContent : function(oController) {
